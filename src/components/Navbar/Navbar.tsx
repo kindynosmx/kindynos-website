@@ -60,7 +60,9 @@ export function Navbar() {
                       backgroundColor="white"
                       fontWeight={900}
                     >
-                      <Link href={'/' + locale}>{languageToCountry[locale]}</Link>
+                      <Link href={'/' + locale} prefetch>
+                        {languageToCountry[locale]}
+                      </Link>
                     </MenuItem>
                   )
                 })}

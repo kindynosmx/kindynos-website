@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import { notFound } from 'next/navigation'
 import { AbstractIntlMessages, NextIntlClientProvider } from 'next-intl'
 
@@ -17,6 +18,7 @@ export default async function LocaleLayout({ children, params: { locale } }) {
   return (
     <html>
       <body>
+        <Analytics />
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ThemeProvider>{children}</ThemeProvider>
         </NextIntlClientProvider>

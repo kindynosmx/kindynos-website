@@ -60,7 +60,7 @@ export default function Home() {
           >
             <GridItem colSpan={{ base: 1, lg: 3 }}>
               <HStack align="center" height="full" justifyContent="center" width="full">
-                <Image alt="Kindynos Logo" height="228" src="/images/logo-white.png" width="750" />
+                <Image alt="Kindynos Logo" height="228" src="/images/logo-white.png" width="750" priority />
               </HStack>
             </GridItem>
             <GridItem alignItems="center">
@@ -81,6 +81,7 @@ export default function Home() {
               </HStack>
             </GridItem>
           </Grid>
+          <HStack justifyContent="center" width="full"></HStack>
           <Button
             _hover={{ opacity: '.6' }}
             background="white"

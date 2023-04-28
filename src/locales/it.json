@@ -1,0 +1,12 @@
+{
+  "BUILD_SOFTWARE": "Lo costruiamo noi!",
+  "START": "Inizia ora.",
+  "TELL_US": "Parlaci della tua idea.",
+  "PITCH_US": "Proponici la tua idea.",
+  "TITLE": "Titolo.",
+  "CONTACT": "Informazioni di contatto.",
+  "MESSAGE": "Descrivi la tua idea.",
+  "SEND": "Invia.",
+  "SUCCESS": "Messaggio inviato con successo.",
+  "FAIL": "Oops, il tuo messaggio non è stato inviato."
+}

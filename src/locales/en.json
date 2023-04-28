@@ -1,3 +1,12 @@
 {
-  "BUILD_SOFTWARE": "We build it!"
+  "BUILD_SOFTWARE": "We build it!",
+  "START": "Start now.",
+  "TELL_US": "Tell us about your idea.",
+  "PITCH_US": "Pitch us your idea.",
+  "TITLE": "Title.",
+  "CONTACT": "Contact information.",
+  "MESSAGE": "Describe your idea.",
+  "SEND": "Send.",
+  "SUCCESS": "Message sent successfully.",
+  "FAIL": "Oops, your message couldn't be sent."
 }

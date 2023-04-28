@@ -4,7 +4,7 @@ const description = 'We build it!'
 
 const url = 'https://kindynos.mx'
 
-const title = 'We build it!'
+const title = 'Kindynos'
 
 export const defaultMetadata: Metadata = {
   description,

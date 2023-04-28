@@ -7,19 +7,15 @@
   "scripts": {
     "build": "next build",
     "dev": "next",
-    "format": "prettier --ignore-path .gitignore --ignore-path .prettierignore '**/*.{md,json,js,jsx,ts,tsx}' --write",
+    "format": "prettier --ignore-path .gitignore --ignore-path .prettierignore '**/*.{md,json,js,jsx,ts,tsx,css}' --write",
     "prepare": "husky install",
     "lint": "eslint --ignore-path .gitignore --ignore-path .eslintignore --cache --cache-location .husky/.eslintcache/ \"**/*.{js,jsx,ts,tsx}\" --max-warnings=0",
-    "lint:locales": "eslint --ext .json --no-eslintrc --config .eslintrc.i18n-json.js --format node_modules/eslint-plugin-i18n-json/formatter.js src/locales/",
     "start": "next start",
     "tscheck": "tsc -p tsconfig.json --noEmit"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "yarn lint --fix"
-    ],
-    "locales/*.json": [
-      "yarn lint:locales --fix"
     ]
   },
   "dependencies": {

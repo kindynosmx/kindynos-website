@@ -1,18 +1,16 @@
 'use client'
 
 /* eslint-disable no-restricted-imports */
+import './fonts.css'
+
 import { CacheProvider } from '@chakra-ui/next-js'
 import { ChakraProvider } from '@chakra-ui/provider'
 import { extendTheme } from '@chakra-ui/react'
-import localFont from 'next/font/local'
 import { ReactNode } from 'react'
 
-const allRoundGothic = localFont({ src: './fonts/all-round-gothic.ttf' })
-const gothic = localFont({ src: './fonts/gothic.woff2' })
-
 export const fonts = {
-  body: `${gothic.style.fontFamily}, sans-serif`,
-  heading: `${allRoundGothic.style.fontFamily}, sans-serif`,
+  body: `muli, sans-serif`,
+  heading: `all-round-gothic, sans-serif`,
 }
 
 export const theme = extendTheme({

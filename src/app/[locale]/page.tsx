@@ -51,7 +51,7 @@ export default function Home() {
       <ContactForm isOpen={openModalForm} onClose={() => setOpenModalForm(false)} />
       <Center height="calc(100vh)" width="full">
         <Navbar />
-        <VStack spacing="10">
+        <VStack spacing="20">
           <Grid
             gridTemplateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(7, 1fr)' }}
             height={{ base: '400px', lg: 'full' }}
@@ -75,7 +75,7 @@ export default function Home() {
             </GridItem>
             <GridItem colSpan={{ base: 1, lg: 3 }}>
               <HStack align="center" height="full" justifyContent={{ base: 'center', lg: 'start' }} width="full">
-                <Heading color="white" size={{ base: '2xl', lg: '3xl' }}>
+                <Heading color="white" size={{ base: '2xl', xl: '3xl' }}>
                   {t('BUILD_SOFTWARE')}
                 </Heading>
               </HStack>

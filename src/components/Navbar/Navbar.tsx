@@ -9,17 +9,17 @@ import React from 'react'
 import { CloseIcon, GlobeIcon } from '@/assets'
 
 const languageToCountry = {
-  cn: 'CHINESE',
-  en: 'ENGLISH',
-  es: 'SPANISH',
-  fr: 'FRENCH',
-  ger: 'GERMAN',
-  it: 'ITALIAN',
-  jp: 'JAPANESE',
-  kr: 'KOREAN',
-  pl: 'POLISH',
-  pt: 'PORTUGUESE',
-  rs: 'RUSSIAN',
+  cn: '中文',
+  en: 'English',
+  es: 'Español',
+  fr: 'Français',
+  ger: 'Deutsch',
+  it: 'Italiano',
+  jp: '日本語',
+  kr: '한국어',
+  pol: 'Polski',
+  pt: 'Português',
+  rs: 'русский язык',
 }
 
 import { HStack, Stack } from '@chakra-ui/layout'

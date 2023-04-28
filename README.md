@@ -13,7 +13,6 @@ This project uses lot of stuff as:
 - [Prettier](https://prettier.io)
 - [Husky](https://github.com/typicode/husky)
 - [Sentry](https://sentry.io/)
-- [next-intl](https://next-intl-docs.vercel.app/)
 - [next-pwa](https://www.npmjs.com/package/next-pwa)
 
 ## Getting Started

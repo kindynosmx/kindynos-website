@@ -3,14 +3,11 @@
 import { Button } from '@chakra-ui/button'
 import { Box, Center, Container, Grid, GridItem, Heading, HStack, VStack } from '@chakra-ui/layout'
 import Image from 'next/image'
-import { useTranslations } from 'next-intl'
 import { useEffect, useRef, useState } from 'react'
 
 import { ContactForm, Navbar } from '@/components'
 
 export default function Home() {
-  const t = useTranslations()
-
   const ref = useRef<HTMLDivElement | null>(null)
 
   useEffect(() => {
@@ -53,8 +50,8 @@ export default function Home() {
         <Navbar />
         <VStack spacing="20">
           <Grid
-            gridTemplateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(7, 1fr)' }}
-            height={{ base: '400px', lg: 'full' }}
+            gridTemplateColumns={{ base: 'repeat(1, 1fr)', lg: 'repeat(6, 1fr)' }}
+            height={{ base: '300px', lg: 'full' }}
             paddingX={{ base: '5', lg: '20' }}
             width="full"
           >
@@ -73,15 +70,14 @@ export default function Home() {
                 />
               </HStack>
             </GridItem>
-            <GridItem colSpan={{ base: 1, lg: 3 }}>
+            <GridItem colSpan={{ base: 1, lg: 2 }}>
               <HStack align="center" height="full" justifyContent={{ base: 'center', lg: 'start' }} width="full">
                 <Heading color="white" size={{ base: '2xl', xl: '3xl' }}>
-                  {t('BUILD_SOFTWARE')}
+                  We build it!
                 </Heading>
               </HStack>
             </GridItem>
           </Grid>
-          <HStack justifyContent="center" width="full"></HStack>
           <Button
             _hover={{ opacity: '.6' }}
             background="white"
@@ -90,7 +86,7 @@ export default function Home() {
             onClick={handleContactFormOpen}
           >
             <Heading color="primary" size="lg">
-              {t('START')}
+              Start now.
             </Heading>
           </Button>
         </VStack>

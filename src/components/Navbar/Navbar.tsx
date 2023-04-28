@@ -1,30 +1,11 @@
 'use client'
 
-import { Button } from '@chakra-ui/button'
 import { IconButton } from '@chakra-ui/button'
-import { Center } from '@chakra-ui/layout'
-import { Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/menu'
+import { HStack, Stack } from '@chakra-ui/layout'
 import { Link } from '@chakra-ui/next-js'
 import React from 'react'
 
 import { GithubIcon, LinkedInIcon } from '@/assets'
-import { CloseIcon, GlobeIcon } from '@/assets'
-
-const languageToCountry = {
-  cn: '中文',
-  en: 'English',
-  es: 'Español',
-  fr: 'Français',
-  ger: 'Deutsch',
-  it: 'Italiano',
-  jp: '日本語',
-  kr: '한국어',
-  pol: 'Polski',
-  pt: 'Português',
-  rs: 'русский язык',
-}
-
-import { HStack, Stack } from '@chakra-ui/layout'
 
 export function Navbar() {
   return (
@@ -36,40 +17,6 @@ export function Navbar() {
         <Link color="white" href="https://www.linkedin.com/company/35519796" target="_blank">
           <IconButton aria-label="Kindynos LinkedIn" icon={<LinkedInIcon />} size="sm" />
         </Link>
-        <Menu>
-          {({ isOpen }) => (
-            <>
-              <MenuButton
-                _active={{ color: 'white' }}
-                _hover={{ color: 'white', opacity: '0.6' }}
-                as={Button}
-                color="white"
-                isActive={isOpen}
-                paddingX="0"
-                transition="all 0.2s"
-              >
-                <Center>{isOpen ? <CloseIcon height={7} width={7} /> : <GlobeIcon height={7} width={7} />}</Center>
-              </MenuButton>
-              <MenuList background="white" border="2px solid" color="primary" rounded="lg">
-                {Object.keys(languageToCountry).map((locale) => {
-                  return (
-                    <MenuItem
-                      key={locale}
-                      _active={{ bg: 'primary', color: 'white' }}
-                      _hover={{ bg: 'primary', color: 'white' }}
-                      backgroundColor="white"
-                      fontWeight={900}
-                    >
-                      <Link href={'/' + locale} prefetch>
-                        {languageToCountry[locale]}
-                      </Link>
-                    </MenuItem>
-                  )
-                })}
-              </MenuList>
-            </>
-          )}
-        </Menu>
       </HStack>
     </Stack>
   )

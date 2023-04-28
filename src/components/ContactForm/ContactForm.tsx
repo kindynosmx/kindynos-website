@@ -1,5 +1,3 @@
-'use client'
-
 import { Alert, AlertIcon, AlertTitle } from '@chakra-ui/alert'
 import { Button } from '@chakra-ui/button'
 import { Input } from '@chakra-ui/input'
@@ -7,12 +5,9 @@ import { Heading, VStack } from '@chakra-ui/layout'
 import { Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/modal'
 import { Spinner } from '@chakra-ui/spinner'
 import { Textarea } from '@chakra-ui/textarea'
-import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
 export function ContactForm({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
-  const t = useTranslations()
-
   const [title, setTitle] = useState<string | undefined>(undefined)
   const [contact, setContact] = useState<string | undefined>(undefined)
   const [message, setMessage] = useState<string | undefined>(undefined)
@@ -66,14 +61,22 @@ export function ContactForm({ isOpen, onClose }: { isOpen: boolean; onClose: () 
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>
-          <Heading size="lg">{t('PITCH_US')}</Heading>
+          <Heading size="lg">Pitch us your idea.</Heading>
         </ModalHeader>
         <ModalCloseButton />
         <ModalBody>
           <VStack>
-            <Input color="gray" placeholder={t('TITLE')} onChange={(e) => handleTitleChange(e.target.value)} />
-            <Textarea color="gray" placeholder={t('MESSAGE')} onChange={(e) => handleMessageChange(e.target.value)} />
-            <Input color="gray" placeholder={t('CONTACT')} onChange={(e) => handleContactChange(e.target.value)} />
+            <Input color="gray" placeholder="Title." onChange={(e) => handleTitleChange(e.target.value)} />
+            <Textarea
+              color="gray"
+              placeholder="Describe your idea."
+              onChange={(e) => handleMessageChange(e.target.value)}
+            />
+            <Input
+              color="gray"
+              placeholder="Contact information."
+              onChange={(e) => handleContactChange(e.target.value)}
+            />
           </VStack>
         </ModalBody>
 
@@ -87,19 +90,19 @@ export function ContactForm({ isOpen, onClose }: { isOpen: boolean; onClose: () 
           onClick={() => handleSend(title, contact, message)}
         >
           <Heading color="white" size="lg">
-            {isLoading ? <Spinner /> : t('SEND')}
+            {isLoading ? <Spinner /> : 'Send.'}
           </Heading>
         </Button>
         {sent && !isLoading && sendSuccess && (
           <Alert status="success">
             <AlertIcon />
-            <AlertTitle>{t('SUCCESS')}</AlertTitle>
+            <AlertTitle>Message sent successfully.</AlertTitle>
           </Alert>
         )}
         {sent && !isLoading && !sendSuccess && (
           <Alert status="error">
             <AlertIcon />
-            <AlertTitle>{t('FAIL')}</AlertTitle>
+            <AlertTitle>Oops, your message couldn&apos;t be sent.</AlertTitle>
           </Alert>
         )}
       </ModalContent>

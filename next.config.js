@@ -24,6 +24,7 @@ const config = {
   },
   images: {
     domains: ['imagedelivery.net'],
+    unoptimized: true,
   },
   reactStrictMode: true,
   sentry: {

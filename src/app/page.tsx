@@ -57,7 +57,13 @@ export default function Home() {
           >
             <GridItem colSpan={{ base: 1, lg: 3 }}>
               <HStack align="center" height="full" justifyContent="center" width="full">
-                <Image alt="Kindynos Logo" height="228" src="/images/logo-white.png" width="750" priority />
+                <Image
+                  alt="Kindynos Logo"
+                  height="228"
+                  src="https://imagedelivery.net/vgqvCj4Mw_NLJNB76Px9jg/a04e8334-b18f-49f2-1008-78dfe26bf100/public"
+                  width="750"
+                  priority
+                />
               </HStack>
             </GridItem>
             <GridItem alignItems="center">

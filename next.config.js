@@ -22,6 +22,9 @@ const config = {
   experimental: {
     appDir: true,
   },
+  images: {
+    domains: ['imagedelivery.net'],
+  },
   reactStrictMode: true,
   sentry: {
     hideSourceMaps: true,

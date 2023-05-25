@@ -1,7 +1,5 @@
-import memoize from "lodash/memoize";
-
-export const getEnv = memoize(() => ({
+export const ENV = {
 	NODE_ENV: process.env.NODE_ENV,
-}));
+};
 
-export const isProd = getEnv().NODE_ENV === "production";
+export const isProd = ENV.NODE_ENV === "production";

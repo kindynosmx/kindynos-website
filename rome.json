@@ -22,12 +22,7 @@
 		"ignore": ["node_modules"],
 		"rules": {
 			"recommended": true,
-			"suspicious": {
-				"noShadowRestrictedNames": "off"
-			},
 			"a11y": {
-				"useKeyWithClickEvents": "off",
-				"useValidAnchor": "warn",
 				"noSvgWithoutTitle": "off"
 			}
 		}

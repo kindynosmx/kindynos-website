@@ -19,23 +19,23 @@ This project uses lot of stuff as:
 First of all, install the dependencies to run this app:
 
 - [NodeJS](https://nodejs.org)
-- [pnpm](https://pnpm.io/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/cli/install/)
 
 ```bash
 # Clone this repository
 $ git clone https://github.com/kindynosmx/kindynos-website && cd kindynos-website
 
 # Install dependencies
-$ pnpm install
+$ yarn install
 
 # Compiles and hot-reloads for development
-$ pnpm dev
+$ yarn dev
 
 # Compiles and minifies for production
-$ pnpm build
+$ yarn build
 
 # Lints and fixes files
-$ pnpm lint
+$ yarn lint
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

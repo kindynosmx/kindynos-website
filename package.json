@@ -11,12 +11,12 @@
 		"build": "next build",
 		"dev": "next",
 		"prepare": "husky install",
-		"lint": "pnpm rome check **/* --apply-unsafe",
+		"lint": "yarn rome check **/* --apply-unsafe",
 		"start": "next start",
 		"tscheck": "tsc -p tsconfig.json --noEmit"
 	},
 	"lint-staged": {
-		"**/*.{js,jsx,ts,tsx}": ["pnpm lint"]
+		"**/*.{js,jsx,ts,tsx}": ["yarn lint"]
 	},
 	"dependencies": {
 		"@chakra-ui/next-js": "^2.1.3",

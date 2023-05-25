@@ -4,6 +4,9 @@
 	"private": false,
 	"description": "We build it!",
 	"license": "MIT",
+	"engines": {
+		"node": ">=18.16.0"
+	},
 	"scripts": {
 		"build": "next build",
 		"dev": "next",

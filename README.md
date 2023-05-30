@@ -18,8 +18,8 @@ This project uses lot of stuff as:
 
 First of all, install the dependencies to run this app:
 
-- [NodeJS](https://nodejs.org)
-- [Yarn](https://classic.yarnpkg.com/en/docs/cli/install/)
+- [nodejs](https://nodejs.org)
+- [yarn](https://yarnpkg.com/)
 
 ```bash
 # Clone this repository

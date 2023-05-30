@@ -9,10 +9,10 @@ This project uses lot of stuff as:
 - [TypeScript](https://www.typescriptlang.org)
 - [Next.js](https://nextjs.org)
 - [Chakra UI](https://chakra-ui.com)
-- [Rome](https://eslint.org)
+- [Eslint](https://eslint.org)
+- [Prettier](https://prettier.io)
 - [Husky](https://github.com/typicode/husky)
 - [Sentry](https://sentry.io/)
-- [next-pwa](https://www.npmjs.com/package/next-pwa)
 
 ## Getting Started
 

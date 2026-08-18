@@ -1,0 +1,96 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand — https://github.com/kindynosmx/kindynos-branding */
+  --pantone-526: #702f8a; /* Pantone 526 C */
+  --pantone-7683: #426da9; /* Pantone 7683 C */
+  --pantone-425: #595958; /* Pantone 425 C */
+  --pantone-421: #b5b7b4; /* Pantone 421 C */
+
+  --background: #101011;
+  --foreground: #f3f3f2;
+  --card: #181818;
+  --card-foreground: #f3f3f2;
+  --primary: var(--pantone-526);
+  --primary-foreground: #ffffff;
+  --secondary: var(--pantone-7683);
+  --secondary-foreground: #ffffff;
+  --muted: #242424;
+  --muted-foreground: var(--pantone-421);
+  --accent: var(--pantone-7683);
+  --accent-foreground: #ffffff;
+  --destructive: #e5484d;
+  --border: rgb(89 89 88 / 0.45);
+  --input: rgb(89 89 88 / 0.55);
+  --ring: var(--pantone-526);
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-mulish), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  letter-spacing: 0.015em;
+  line-height: 1.7;
+}
+
+::selection {
+  background: var(--primary);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  line-height: 1.28;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-glow {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgb(112 47 138 / 0.42), transparent),
+    radial-gradient(ellipse 50% 40% at 85% 10%, rgb(66 109 169 / 0.32), transparent);
+}

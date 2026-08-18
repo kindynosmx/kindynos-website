@@ -1,55 +1,37 @@
-<h1 align="center">
-<strong>Kindynos Website</strong>
-</h1>
+# Kindynos Website
 
-## What is inside?
+Bilingual marketing site for Kindynos — a Mexico-based software studio.
 
-This project uses lot of stuff as:
+## Stack
 
+- [Next.js](https://nextjs.org) 16 (App Router)
+- [React](https://react.dev) 19
 - [TypeScript](https://www.typescriptlang.org)
-- [Next.js](https://nextjs.org)
-- [Chakra UI](https://chakra-ui.com)
-- [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Husky](https://github.com/typicode/husky)
-- [Sentry](https://sentry.io/)
+- [Tailwind CSS](https://tailwindcss.com) 4 + [shadcn/ui](https://ui.shadcn.com)
+- [next-intl](https://next-intl.dev) (`/en`, `/es`)
+- [Bun](https://bun.sh)
+- Hosted on [Vercel](https://vercel.com)
 
-## Getting Started
+## Prerequisites
 
-First of all, install the dependencies to run this app:
+- [Bun](https://bun.sh) 1.3+
+- Node.js 22+ (Vercel runtime)
 
-- [nodejs](https://nodejs.org)
-- [yarn](https://yarnpkg.com/)
+## Setup
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/kindynosmx/kindynos-website && cd kindynos-website
-
-# Install dependencies
-$ yarn install
-
-# Compiles and hot-reloads for development
-$ yarn dev
-
-# Compiles and minifies for production
-$ yarn build
-
-# Lints and fixes files
-$ yarn lint
+git clone https://github.com/kindynosmx/kindynos-website && cd kindynos-website
+bun install
+bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Locale routing lives at `/en` and `/es`.
 
 ## Commands
 
-- `dev`: runs your application on `localhost:3000`.
-- `build`: creates the production build version.
-- `start`: starts a simple server with the build production code.
-- `format`: runs the prettier fixes for all the files.
-- `lint`: runs the linter in all components and pages.
+- `bun dev` — development server
+- `bun run build` — production build
+- `bun run start` — serve the production build
+- `bun run tscheck` — TypeScript (`noEmit`)
 
-Check [package.json](./package.json) for other useful scripts.
-
-## Contribution Guidelines
-
-Developers are expected to follow contribution guidelines to keep the codebase efficient, readable, and standardized. Contribution guidelines are clearly laid out so developers and contributors can submit their work without much revision, resulting in faster development and more useful contributions. These guideliness are specified through the `eslint` modules.
+Copy lives in `src/messages/en.json` and `src/messages/es.json`.

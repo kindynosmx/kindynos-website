@@ -1,14 +1,11 @@
-import { ThemeProvider } from '@/theme'
-import { defaultMetadata } from '@/utils'
+import type { ReactNode } from 'react'
 
-export const metadata = defaultMetadata
+import '@/app/globals.css'
 
-export default async function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
-    </html>
-  )
+type Props = {
+  children: ReactNode
+}
+
+export default function RootLayout({ children }: Props) {
+  return children
 }

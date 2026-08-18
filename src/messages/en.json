@@ -1,0 +1,189 @@
+{
+  "Metadata": {
+    "title": "Kindynos — High-standard software studio",
+    "description": "Kindynos designs and ships blockchain, web, and backend systems for teams that need reliable engineering. Based in Mexico.",
+    "keywords": "Kindynos, software studio, blockchain, smart contracts, web3, Next.js, backend, Mexico"
+  },
+  "Nav": {
+    "services": "Services",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skip": "Skip to content"
+  },
+  "Hero": {
+    "eyebrow": "Software studio · Mexico",
+    "title": "We build the systems that move your product forward.",
+    "subtitle": "Kindynos is a high-standard software studio. We design and ship blockchain infrastructure, web applications, and backend systems — from first architecture to production.",
+    "cta": "Start a project",
+    "ctaSecondary": "View services",
+    "tagline": "We build it."
+  },
+  "Services": {
+    "eyebrow": "What we do",
+    "title": "Engineering for products that cannot afford to be fragile.",
+    "subtitle": "Five practices. One bar: production-grade software, delivered with clarity.",
+    "items": {
+      "blockchain": {
+        "title": "Blockchain & smart contracts",
+        "description": "Tokens, NFTs, and complex Solidity systems. We write contracts with audit-minded engineering and ship the tooling around them."
+      },
+      "web3": {
+        "title": "Web3 & protocol infrastructure",
+        "description": "dApps, wallets, indexers, and the glue between on-chain and off-chain. Protocol work that holds up in production."
+      },
+      "webapps": {
+        "title": "Custom web applications",
+        "description": "Product sites and full-stack apps on Next.js and modern backends — fast, SEO-ready, and built to last."
+      },
+      "backend": {
+        "title": "Backend, APIs & infrastructure",
+        "description": "APIs, data layers, and cloud infrastructure that stay reliable under load. Architecture you can operate."
+      },
+      "consulting": {
+        "title": "Technical consulting & architecture",
+        "description": "Architecture reviews, protocol design, and hands-on engineering leadership when the next decision has to be the right one."
+      }
+    }
+  },
+  "Process": {
+    "eyebrow": "How we work",
+    "title": "A short path from idea to production.",
+    "subtitle": "Tight loops, visible progress, and a delivery plan you can trust.",
+    "steps": {
+      "discover": {
+        "title": "Discover",
+        "description": "Align on goals, constraints, and the real problem — before a line of code."
+      },
+      "design": {
+        "title": "Design",
+        "description": "Architecture, UX, and a delivery plan with clear scope and checkpoints."
+      },
+      "build": {
+        "title": "Build",
+        "description": "Tight iterations, production-grade code, and progress you can see every week."
+      },
+      "ship": {
+        "title": "Ship",
+        "description": "Deploy, document, and stay on through the critical window after launch."
+      }
+    }
+  },
+  "About": {
+    "eyebrow": "The studio",
+    "title": "Mexico-based. Built for high-standard work.",
+    "body": "Kindynos is a software studio from Mexico. We started in blockchain and crypto infrastructure, and we still live there — while also building the web and backend systems that surround it.",
+    "body2": "We take on work where the engineering bar matters: protocols, wallets, APIs, and products that cannot afford to be fragile.",
+    "quote": "We build it."
+  },
+  "Contact": {
+    "eyebrow": "Get in touch",
+    "title": "Pitch us your idea.",
+    "subtitle": "Tell us what you want to ship. We typically reply within a few business days.",
+    "emailCta": "Or write us at",
+    "name": "Name",
+    "email": "Email",
+    "company": "Company",
+    "companyOptional": "optional",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "you@company.com",
+    "companyPlaceholder": "Company or project",
+    "messagePlaceholder": "What do you want to build?",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "success": "Message sent. We’ll get back to you soon.",
+    "error": "Something went wrong. Email us directly and we’ll pick it up."
+  },
+  "Footer": {
+    "tagline": "High-standard software for blockchain, web, and backend.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "rights": "Kindynos. All rights reserved.",
+    "language": "Language"
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "That URL doesn’t exist. Head back home and start from there.",
+    "cta": "Back to home"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated: August 18, 2026",
+    "disclaimer": "This page describes how Kindynos handles information collected through kindynos.mx. It is provided for transparency and is not legal advice.",
+    "sections": [
+      {
+        "title": "Who we are",
+        "body": "Kindynos is a software studio based in Mexico. For privacy questions, contact us at contact@kindynos.mx."
+      },
+      {
+        "title": "What we collect",
+        "body": "You can reach us by email at contact@kindynos.mx. Server logs may include your IP address, browser type, and the pages you request, which our hosting provider (Vercel) may process to operate the site."
+      },
+      {
+        "title": "Why we collect it",
+        "body": "If you email us, we use that correspondence only to reply to your inquiry and, if relevant, to discuss a potential project. We do not sell your information or use it for advertising."
+      },
+      {
+        "title": "How we share it",
+        "body": "We use Vercel to host the site. We share information only when needed to operate the site, respond to you, or comply with the law."
+      },
+      {
+        "title": "Retention",
+        "body": "We keep email inquiries for as long as needed to handle your request and any follow-up project, then delete or archive them according to our internal records practice."
+      },
+      {
+        "title": "Your rights",
+        "body": "Depending on where you live, you may have rights to access, correct, or delete personal data we hold about you (including ARCO rights under Mexican law). Email contact@kindynos.mx and we will respond within a reasonable time."
+      },
+      {
+        "title": "Cookies",
+        "body": "This site does not use advertising or analytics cookies. Essential cookies may be set by the framework or hosting provider to deliver the page and remember your language preference."
+      },
+      {
+        "title": "International transfers",
+        "body": "Our hosting and email providers may process data in the United States or other countries. By using the site or sending a message, you understand that your information may be processed outside Mexico."
+      }
+    ]
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "updated": "Last updated: August 18, 2026",
+    "disclaimer": "These terms govern use of kindynos.mx. Project work is covered by a separate agreement. This page is not legal advice.",
+    "sections": [
+      {
+        "title": "The site",
+        "body": "kindynos.mx is a public website describing Kindynos and our services. Content is provided for information. We may update copy, services, or these terms at any time."
+      },
+      {
+        "title": "No professional engagement by browsing",
+        "body": "Visiting the site or sending a contact form does not create a client relationship, a bid, or a duty to respond beyond ordinary professional courtesy. Paid work starts only when both parties sign a written agreement."
+      },
+      {
+        "title": "Acceptable use",
+        "body": "Do not misuse the site: no scraping that degrades service, no attempts to break security, and no submission of unlawful, harmful, or misleading content through the contact form."
+      },
+      {
+        "title": "Intellectual property",
+        "body": "The Kindynos name, logo, and site content belong to Kindynos unless otherwise noted. You may not copy or reuse them without permission, except for ordinary quoting with attribution."
+      },
+      {
+        "title": "Disclaimer",
+        "body": "The site is provided “as is.” We do not warrant that it will be uninterrupted or error-free. To the extent allowed by law, Kindynos is not liable for damages arising from use of the public website."
+      },
+      {
+        "title": "Governing law",
+        "body": "These terms are governed by the laws of Mexico, without regard to conflict-of-law rules. Courts in Aguascalientes, Mexico, have jurisdiction, unless applicable consumer law requires otherwise."
+      },
+      {
+        "title": "Contact",
+        "body": "Questions about these terms: contact@kindynos.mx."
+      }
+    ]
+  }
+}

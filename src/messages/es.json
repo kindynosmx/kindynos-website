@@ -1,0 +1,189 @@
+{
+  "Metadata": {
+    "title": "Kindynos — Estudio de software de alto estándar",
+    "description": "Kindynos diseña y entrega sistemas de blockchain, web y backend para equipos que necesitan ingeniería fiable. Con base en México.",
+    "keywords": "Kindynos, estudio de software, blockchain, contratos inteligentes, web3, Next.js, backend, México"
+  },
+  "Nav": {
+    "services": "Servicios",
+    "process": "Proceso",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Iniciar un proyecto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "skip": "Saltar al contenido"
+  },
+  "Hero": {
+    "eyebrow": "Estudio de software · México",
+    "title": "Construimos los sistemas que hacen avanzar tu producto.",
+    "subtitle": "Kindynos es un estudio de software de alto estándar. Diseñamos y entregamos infraestructura blockchain, aplicaciones web y sistemas backend — desde la primera arquitectura hasta producción.",
+    "cta": "Iniciar un proyecto",
+    "ctaSecondary": "Ver servicios",
+    "tagline": "We build it."
+  },
+  "Services": {
+    "eyebrow": "Qué hacemos",
+    "title": "Ingeniería para productos que no pueden ser frágiles.",
+    "subtitle": "Cinco prácticas. Un solo criterio: software de producción, entregado con claridad.",
+    "items": {
+      "blockchain": {
+        "title": "Blockchain y contratos inteligentes",
+        "description": "Tokens, NFTs y sistemas complejos en Solidity. Escribimos contratos con ingeniería pensada para auditoría y entregamos el tooling que los rodea."
+      },
+      "web3": {
+        "title": "Web3 e infraestructura de protocolos",
+        "description": "dApps, wallets, indexadores y el puente entre on-chain y off-chain. Trabajo de protocolo que aguanta en producción."
+      },
+      "webapps": {
+        "title": "Aplicaciones web a medida",
+        "description": "Sitios de producto y apps full-stack con Next.js y backends modernos: rápidas, listas para SEO y hechas para durar."
+      },
+      "backend": {
+        "title": "Backend, APIs e infraestructura",
+        "description": "APIs, capas de datos e infraestructura en la nube que se mantienen fiables bajo carga. Arquitectura que se puede operar."
+      },
+      "consulting": {
+        "title": "Consultoría técnica y arquitectura",
+        "description": "Revisiones de arquitectura, diseño de protocolos y liderazgo de ingeniería cuando la siguiente decisión tiene que ser la correcta."
+      }
+    }
+  },
+  "Process": {
+    "eyebrow": "Cómo trabajamos",
+    "title": "Un camino corto de la idea a producción.",
+    "subtitle": "Ciclos cortos, progreso visible y un plan de entrega en el que puedes confiar.",
+    "steps": {
+      "discover": {
+        "title": "Descubrir",
+        "description": "Alineamos objetivos, restricciones y el problema real — antes de una línea de código."
+      },
+      "design": {
+        "title": "Diseñar",
+        "description": "Arquitectura, UX y un plan de entrega con alcance y puntos de control claros."
+      },
+      "build": {
+        "title": "Construir",
+        "description": "Iteraciones cortas, código de producción y progreso que puedes ver cada semana."
+      },
+      "ship": {
+        "title": "Entregar",
+        "description": "Desplegamos, documentamos y acompañamos en la ventana crítica después del lanzamiento."
+      }
+    }
+  },
+  "About": {
+    "eyebrow": "El estudio",
+    "title": "Con base en México. Hechos para trabajo de alto estándar.",
+    "body": "Kindynos es un estudio de software de México. Empezamos en blockchain e infraestructura cripto, y seguimos ahí — además de construir la web y los backends que lo rodean.",
+    "body2": "Tomamos trabajo donde el listón de ingeniería importa: protocolos, wallets, APIs y productos que no pueden ser frágiles.",
+    "quote": "We build it."
+  },
+  "Contact": {
+    "eyebrow": "Hablemos",
+    "title": "Cuéntanos tu idea.",
+    "subtitle": "Dinos qué quieres entregar. Solemos responder en unos días hábiles.",
+    "emailCta": "O escríbenos a",
+    "name": "Nombre",
+    "email": "Correo",
+    "company": "Empresa",
+    "companyOptional": "opcional",
+    "message": "Mensaje",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "tu@empresa.com",
+    "companyPlaceholder": "Empresa o proyecto",
+    "messagePlaceholder": "¿Qué quieres construir?",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando…",
+    "success": "Mensaje enviado. Te responderemos pronto.",
+    "error": "Algo salió mal. Escríbenos por correo y lo vemos."
+  },
+  "Footer": {
+    "tagline": "Software de alto estándar para blockchain, web y backend.",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "rights": "Kindynos. Todos los derechos reservados.",
+    "language": "Idioma"
+  },
+  "NotFound": {
+    "title": "Página no encontrada",
+    "body": "Esa URL no existe. Vuelve al inicio y empieza desde ahí.",
+    "cta": "Volver al inicio"
+  },
+  "Privacy": {
+    "title": "Política de privacidad",
+    "updated": "Última actualización: 18 de agosto de 2026",
+    "disclaimer": "Esta página describe cómo Kindynos trata la información recopilada en kindynos.mx. Se ofrece con fines de transparencia y no constituye asesoría legal.",
+    "sections": [
+      {
+        "title": "Quiénes somos",
+        "body": "Kindynos es un estudio de software con sede en México. Para temas de privacidad, escríbenos a contact@kindynos.mx."
+      },
+      {
+        "title": "Qué recopilamos",
+        "body": "Puedes escribirnos a contact@kindynos.mx. Los registros del servidor pueden incluir tu IP, tipo de navegador y las páginas que solicitas, que nuestro proveedor de hosting (Vercel) puede procesar para operar el sitio."
+      },
+      {
+        "title": "Para qué lo usamos",
+        "body": "Si nos escribes, usamos esa correspondencia solo para responder tu consulta y, si aplica, para hablar de un posible proyecto. No vendemos tu información ni la usamos para publicidad."
+      },
+      {
+        "title": "Con quién la compartimos",
+        "body": "Usamos Vercel para alojar el sitio. Compartimos información solo cuando hace falta para operar el sitio, responderte o cumplir la ley."
+      },
+      {
+        "title": "Conservación",
+        "body": "Conservamos las consultas por correo el tiempo necesario para atender tu solicitud y cualquier proyecto posterior, y luego las eliminamos o archivamos según nuestra práctica interna."
+      },
+      {
+        "title": "Tus derechos",
+        "body": "Según dónde vivas, puedes tener derechos de acceso, rectificación o cancelación de datos personales (incluidos los derechos ARCO en México). Escríbenos a contact@kindynos.mx y responderemos en un plazo razonable."
+      },
+      {
+        "title": "Cookies",
+        "body": "Este sitio no usa cookies de publicidad ni analítica. El framework o el hosting pueden fijar cookies esenciales para servir la página y recordar tu idioma."
+      },
+      {
+        "title": "Transferencias internacionales",
+        "body": "Nuestros proveedores de hosting y correo pueden procesar datos en Estados Unidos u otros países. Al usar el sitio o enviar un mensaje, entiendes que tu información puede tratarse fuera de México."
+      }
+    ]
+  },
+  "Terms": {
+    "title": "Términos de servicio",
+    "updated": "Última actualización: 18 de agosto de 2026",
+    "disclaimer": "Estos términos rigen el uso de kindynos.mx. El trabajo de proyecto se cubre con un acuerdo aparte. Esta página no constituye asesoría legal.",
+    "sections": [
+      {
+        "title": "El sitio",
+        "body": "kindynos.mx es un sitio público que describe Kindynos y nuestros servicios. El contenido es informativo. Podemos actualizar textos, servicios o estos términos en cualquier momento."
+      },
+      {
+        "title": "Navegar no implica un encargo",
+        "body": "Visitar el sitio o enviar el formulario no crea una relación de cliente, una oferta ni un deber de responder más allá de la cortesía profesional. El trabajo remunerado empieza solo cuando ambas partes firman un acuerdo por escrito."
+      },
+      {
+        "title": "Uso aceptable",
+        "body": "No uses mal el sitio: nada de scraping que degrade el servicio, nada de intentos de romper la seguridad y nada de contenido ilícito, dañino o engañoso en el formulario."
+      },
+      {
+        "title": "Propiedad intelectual",
+        "body": "El nombre Kindynos, el logo y el contenido del sitio pertenecen a Kindynos, salvo indicación contraria. No puedes copiarlos ni reutilizarlos sin permiso, salvo citas ordinarias con atribución."
+      },
+      {
+        "title": "Exención de responsabilidad",
+        "body": "El sitio se ofrece «tal cual». No garantizamos que esté ininterrumpido o libre de errores. En la medida que permita la ley, Kindynos no responde por daños derivados del uso del sitio público."
+      },
+      {
+        "title": "Ley aplicable",
+        "body": "Estos términos se rigen por las leyes de México, sin perjuicio de las normas de conflicto de leyes. Los tribunales de Aguascalientes, México, tienen jurisdicción, salvo que la ley de consumo aplicable disponga otra cosa."
+      },
+      {
+        "title": "Contacto",
+        "body": "Preguntas sobre estos términos: contact@kindynos.mx."
+      }
+    ]
+  }
+}

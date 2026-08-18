@@ -17,20 +17,27 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const pathname = usePathname()
 
   return (
-    <div className={cn('border-border bg-muted/40 flex items-center rounded-full border p-0.5 text-xs', className)}>
-      {routing.locales.map((code) => (
-        <button
-          key={code}
-          type="button"
-          className={cn(
-            'rounded-full px-2.5 py-1 font-medium transition-colors',
-            locale === code ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:text-foreground',
-          )}
-          onClick={() => router.replace(pathname, { locale: code })}
-        >
-          {LABELS[code]}
-        </button>
-      ))}
+    <div className={cn('inline-flex items-center gap-1', className)} role="group" aria-label="Language">
+      {routing.locales.map((code) => {
+        const active = locale === code
+
+        return (
+          <button
+            key={code}
+            type="button"
+            aria-pressed={active}
+            className={cn(
+              'cursor-pointer rounded-md px-2.5 py-1.5 text-sm font-semibold transition-colors',
+              active
+                ? 'bg-primary text-white'
+                : 'border-border text-foreground hover:bg-muted border bg-white',
+            )}
+            onClick={() => router.replace(pathname, { locale: code })}
+          >
+            {LABELS[code]}
+          </button>
+        )
+      })}
     </div>
   )
 }

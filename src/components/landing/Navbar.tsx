@@ -4,10 +4,10 @@ import { Menu, X } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
 
+import { BrandLogo } from '@/components/BrandLogo'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Button } from '@/components/ui/button'
 import { Link } from '@/i18n/navigation'
-import { SITE_NAME } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const NAV_ITEMS = [
@@ -22,11 +22,9 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="border-border/80 bg-background/70 sticky top-0 z-50 border-b backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="font-display text-foreground text-lg">
-          {SITE_NAME}
-        </Link>
+    <header className="border-border/80 sticky top-0 z-50 border-b bg-white/90 backdrop-blur-xl">
+      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <BrandLogo />
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
           {NAV_ITEMS.map((item) => (

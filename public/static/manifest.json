@@ -3,12 +3,12 @@
   "short_name": "Kindynos",
   "description": "High-standard software for blockchain, web, and backend.",
   "theme_color": "#426DA9",
-  "background_color": "#101011",
+  "background_color": "#ffffff",
   "display": "browser",
   "start_url": "/en",
   "icons": [
     {
-      "src": "https://imagedelivery.net/vgqvCj4Mw_NLJNB76Px9jg/dc899046-5253-4e5e-e00d-363d207e8700/public",
+      "src": "/brand/icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }

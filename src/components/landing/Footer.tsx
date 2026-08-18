@@ -1,10 +1,10 @@
 import { getTranslations } from 'next-intl/server'
 
+import { BrandLogo } from '@/components/BrandLogo'
 import { GitHubIcon, LinkedInIcon } from '@/components/icons'
-
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { Link } from '@/i18n/navigation'
-import { GITHUB_URL, LINKEDIN_URL, SITE_NAME } from '@/lib/site'
+import { GITHUB_URL, LINKEDIN_URL } from '@/lib/site'
 
 export async function Footer() {
   const t = await getTranslations('Footer')
@@ -14,8 +14,8 @@ export async function Footer() {
     <footer className="border-border border-t">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 md:flex-row md:items-start md:justify-between">
         <div className="max-w-sm">
-          <p className="font-display text-lg font-medium">{SITE_NAME}</p>
-          <p className="text-muted-foreground mt-3 text-sm leading-7">{t('tagline')}</p>
+          <BrandLogo />
+          <p className="text-muted-foreground mt-4 text-sm leading-7">{t('tagline')}</p>
         </div>
         <div className="flex flex-wrap items-center gap-6 text-sm">
           <Link href="/privacy" className="text-muted-foreground hover:text-foreground">

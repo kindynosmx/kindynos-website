@@ -1,6 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
-import { Mulish, Syne } from 'next/font/google'
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 
@@ -12,20 +11,8 @@ import { buildMetadata } from '@/lib/metadata'
 
 export const viewport: Viewport = {
   themeColor: '#426DA9',
-  colorScheme: 'dark',
+  colorScheme: 'light',
 }
-
-const mulish = Mulish({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-mulish',
-  display: 'swap',
-})
-
-const syne = Syne({
-  subsets: ['latin', 'latin-ext'],
-  variable: '--font-syne',
-  display: 'swap',
-})
 
 type Props = {
   children: ReactNode
@@ -58,7 +45,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   const t = await getTranslations('Nav')
 
   return (
-    <html lang={locale} className={`dark ${mulish.variable} ${syne.variable}`}>
+    <html lang={locale}>
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/wsf0ocf.css" />
+      </head>
       <body className="flex min-h-dvh flex-col font-sans antialiased">
         <NextIntlClientProvider>
           <a

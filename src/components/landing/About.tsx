@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { SectionEyebrow } from '@/components/landing/SectionEyebrow'
@@ -14,8 +15,17 @@ export async function About() {
           <p className="text-muted-foreground mt-7 max-w-xl leading-8">{t('body')}</p>
           <p className="text-muted-foreground mt-5 max-w-xl leading-8">{t('body2')}</p>
         </div>
-        <blockquote className="brand-gradient rounded-2xl p-10">
-          <p className="font-display text-4xl font-semibold tracking-[0.12em] text-white uppercase sm:text-5xl">
+        <blockquote className="brand-gradient relative overflow-hidden rounded-2xl p-10">
+          <Image
+            src="/brand/isotype-white.png"
+            alt=""
+            width={1000}
+            height={1000}
+            className="pointer-events-none absolute -right-8 -bottom-10 w-48 opacity-20 select-none"
+            aria-hidden
+          />
+          <Image src="/brand/isotype-white.png" alt="" width={80} height={80} className="relative mb-8 size-14" />
+          <p className="font-display relative text-4xl font-semibold tracking-[0.12em] text-white uppercase sm:text-5xl">
             {t('quote')}
           </p>
         </blockquote>

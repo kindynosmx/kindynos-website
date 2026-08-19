@@ -1,5 +1,6 @@
 'use client'
 
+import { Send } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 
 import { Button } from '@/components/ui/button'
@@ -51,6 +52,7 @@ export function ContactForm() {
         <Textarea id="message" name="message" maxLength={5000} placeholder={t('messagePlaceholder')} />
       </div>
       <Button type="submit" size="lg" className="w-full sm:w-auto">
+        <Send className="size-4" aria-hidden />
         {t('submit')}
       </Button>
     </form>

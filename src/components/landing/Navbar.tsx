@@ -24,7 +24,7 @@ export function Navbar() {
   return (
     <header className="border-border/80 sticky top-0 z-50 border-b bg-white/90 backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <BrandLogo />
+        <BrandLogo priority />
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
           {NAV_ITEMS.map((item) => (

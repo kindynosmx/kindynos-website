@@ -1,5 +1,7 @@
+import { Analytics } from '@vercel/analytics/next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import Script from 'next/script'
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 
@@ -47,9 +49,16 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <head>
-        <link rel="stylesheet" href="https://use.typekit.net/wsf0ocf.css" />
+        <link rel="preconnect" href="https://use.typekit.net" />
+        <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
       </head>
       <body className="flex min-h-dvh flex-col font-sans antialiased">
+        <Script id="typekit-css" strategy="afterInteractive">
+          {`var l=document.createElement('link');l.rel='stylesheet';l.href='https://use.typekit.net/wsf0ocf.css';document.head.appendChild(l);`}
+        </Script>
+        <noscript>
+          <link rel="stylesheet" href="https://use.typekit.net/wsf0ocf.css" />
+        </noscript>
         <NextIntlClientProvider>
           <a
             href="#content"
@@ -63,6 +72,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           </div>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
       </body>
     </html>
   )

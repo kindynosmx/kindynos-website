@@ -3,7 +3,7 @@
 import { Turnstile, type TurnstileInstance } from '@marsidev/react-turnstile'
 import { Send } from 'lucide-react'
 import { useLocale, useTranslations } from 'next-intl'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -26,6 +26,15 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [errors, setErrors] = useState<FieldErrors>({})
   const [serverError, setServerError] = useState<string>()
+  const [turnstileSize, setTurnstileSize] = useState<'compact' | 'flexible'>('flexible')
+
+  useEffect(() => {
+    const media = window.matchMedia('(max-width: 419px)')
+    const sync = () => setTurnstileSize(media.matches ? 'compact' : 'flexible')
+    sync()
+    media.addEventListener('change', sync)
+    return () => media.removeEventListener('change', sync)
+  }, [])
 
   function resetTurnstile() {
     setToken('')
@@ -110,7 +119,7 @@ export function ContactForm() {
   const sending = status === 'sending'
 
   return (
-    <form ref={formRef} className="space-y-4" noValidate onSubmit={onSubmit}>
+    <form ref={formRef} className="min-w-0 space-y-4" noValidate onSubmit={onSubmit}>
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="name">{t('name')}</Label>
@@ -185,7 +194,7 @@ export function ContactForm() {
             }}
             onExpire={() => setToken('')}
             onError={() => setToken('')}
-            options={{ theme: 'light', size: 'flexible', language: locale }}
+            options={{ theme: 'light', size: turnstileSize, language: locale }}
           />
           <FieldError id="turnstile-error" message={errors.turnstile ? t('errors.turnstile') : undefined} />
         </div>

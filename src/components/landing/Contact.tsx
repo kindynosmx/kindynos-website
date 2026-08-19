@@ -10,26 +10,28 @@ export async function Contact() {
   const t = await getTranslations('Contact')
 
   return (
-    <section id="contact" className="scroll-mt-24">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-2">
-        <div>
+    <section id="contact" className="scroll-mt-20 sm:scroll-mt-24">
+      <div className="mx-auto grid max-w-6xl min-w-0 gap-10 px-4 py-16 sm:px-6 sm:py-28 lg:grid-cols-2 lg:gap-12">
+        <div className="min-w-0">
           <SectionEyebrow>{t('eyebrow')}</SectionEyebrow>
-          <h2 className="font-display mt-6 text-3xl font-semibold sm:text-4xl">{t('title')}</h2>
-          <p className="text-muted-foreground mt-6 max-w-md leading-8">{t('subtitle')}</p>
+          <h2 className="font-display mt-6 text-3xl font-semibold break-words sm:text-4xl">{t('title')}</h2>
+          <p className="text-muted-foreground mt-6 max-w-md leading-7 text-pretty sm:leading-8">{t('subtitle')}</p>
           <a
-            className="mt-8 inline-flex items-center gap-3 rounded-xl bg-white"
+            className="mt-8 inline-flex min-w-0 max-w-full items-center gap-3 rounded-xl bg-white"
             href={`mailto:${CONTACT_EMAIL}`}
           >
             <IconBadge>
               <Mail className="size-5" aria-hidden />
             </IconBadge>
-            <span>
+            <span className="min-w-0">
               <span className="text-muted-foreground block text-sm">{t('emailCta')}</span>
-              <span className="text-foreground font-medium underline-offset-4 hover:underline">{CONTACT_EMAIL}</span>
+              <span className="text-foreground block font-medium break-all underline-offset-4 hover:underline">
+                {CONTACT_EMAIL}
+              </span>
             </span>
           </a>
         </div>
-        <div className="bg-card relative rounded-xl p-6 sm:p-8">
+        <div className="bg-card relative min-w-0 rounded-xl p-4 sm:p-8">
           <ContactForm />
         </div>
       </div>

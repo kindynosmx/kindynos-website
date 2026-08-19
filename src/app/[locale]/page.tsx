@@ -17,7 +17,7 @@ export default async function HomePage({ params }: Props) {
   setRequestLocale(parseLocale(localeParam))
 
   return (
-    <main>
+    <main className="min-w-0 overflow-x-clip">
       <JsonLd />
       <Hero />
       <Services />

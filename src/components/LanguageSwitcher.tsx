@@ -27,7 +27,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             type="button"
             aria-pressed={active}
             className={cn(
-              'cursor-pointer rounded-md px-2.5 py-1.5 text-sm font-semibold transition-colors',
+              'cursor-pointer rounded-md px-3 py-2 text-sm font-semibold transition-colors min-h-11 min-w-11',
               active
                 ? 'bg-primary text-white'
                 : 'border-border text-foreground hover:bg-muted border bg-white',

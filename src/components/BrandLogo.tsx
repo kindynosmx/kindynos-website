@@ -22,14 +22,14 @@ export function BrandLogo({
   const logo = LOGOS[variant]
 
   return (
-    <Link href="/" className={cn('inline-flex', className)} aria-label="Kindynos">
+    <Link href="/" className={cn('inline-flex shrink-0', className)} aria-label="Kindynos">
       <Image
         src={logo.src}
         alt="Kindynos"
         width={logo.width}
         height={logo.height}
         sizes="180px"
-        className="h-9 w-auto md:h-10"
+        className="h-8 w-auto max-w-[10.5rem] sm:h-9 md:h-10 md:max-w-[12rem]"
         priority={priority}
       />
     </Link>

@@ -12,6 +12,9 @@ import { routing } from '@/i18n/routing'
 import { buildMetadata } from '@/lib/metadata'
 
 export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
   themeColor: '#426DA9',
   colorScheme: 'light',
 }
@@ -52,7 +55,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <link rel="preconnect" href="https://use.typekit.net" />
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />
       </head>
-      <body className="flex min-h-dvh flex-col font-sans antialiased">
+      <body className="flex min-h-dvh max-w-full min-w-0 flex-col font-sans antialiased">
         <Script id="typekit-css" strategy="afterInteractive">
           {`var l=document.createElement('link');l.rel='stylesheet';l.href='https://use.typekit.net/wsf0ocf.css';document.head.appendChild(l);`}
         </Script>

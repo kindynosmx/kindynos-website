@@ -47,7 +47,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const t = await getTranslations('Nav')
 
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://use.typekit.net" />
         <link rel="preconnect" href="https://p.typekit.net" crossOrigin="anonymous" />

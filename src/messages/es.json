@@ -96,7 +96,13 @@
     "submit": "Enviar mensaje",
     "sending": "Enviando…",
     "success": "Mensaje enviado. Te responderemos pronto.",
-    "error": "Algo salió mal. Escríbenos por correo y lo vemos."
+    "error": "Algo salió mal. Escríbenos por correo y lo vemos.",
+    "errors": {
+      "name": "Escribe tu nombre.",
+      "email": "Escribe un correo válido.",
+      "message": "Cuéntanos un poco qué quieres construir.",
+      "turnstile": "Completa la verificación."
+    }
   },
   "Footer": {
     "tagline": "Software de alto estándar para blockchain, web y backend.",
@@ -123,15 +129,15 @@
       },
       {
         "title": "Qué recopilamos",
-        "body": "Puedes escribirnos a contact@kindynos.mx. Los registros del servidor pueden incluir tu IP, tipo de navegador y las páginas que solicitas, que nuestro proveedor de hosting (Vercel) puede procesar para operar el sitio."
+        "body": "Si usas el formulario de contacto, recopilamos tu nombre, correo, empresa (opcional) y mensaje. También puedes escribirnos a contact@kindynos.mx. Los registros del servidor pueden incluir tu IP, tipo de navegador y las páginas que solicitas, que nuestro proveedor de hosting (Vercel) puede procesar para operar el sitio."
       },
       {
         "title": "Para qué lo usamos",
-        "body": "Si nos escribes, usamos esa correspondencia solo para responder tu consulta y, si aplica, para hablar de un posible proyecto. No vendemos tu información ni la usamos para publicidad."
+        "body": "Si nos escribes por correo o por el formulario, usamos esa correspondencia solo para responder tu consulta y, si aplica, para hablar de un posible proyecto. No vendemos tu información ni la usamos para publicidad."
       },
       {
         "title": "Con quién la compartimos",
-        "body": "Usamos Vercel para alojar el sitio. Compartimos información solo cuando hace falta para operar el sitio, responderte o cumplir la ley."
+        "body": "Usamos Vercel para alojar el sitio, Resend para entregar los mensajes del formulario y Cloudflare Turnstile para reducir spam. Compartimos información solo cuando hace falta para operar el sitio, responderte o cumplir la ley."
       },
       {
         "title": "Conservación",
@@ -143,7 +149,7 @@
       },
       {
         "title": "Cookies",
-        "body": "Este sitio no usa cookies de publicidad ni analítica. El framework o el hosting pueden fijar cookies esenciales para servir la página y recordar tu idioma."
+        "body": "Este sitio no usa cookies de publicidad. Cloudflare Turnstile puede fijar una cookie para confirmar que eres humano cuando usas el formulario. El framework o el hosting pueden fijar cookies esenciales para servir la página y recordar tu idioma."
       },
       {
         "title": "Transferencias internacionales",

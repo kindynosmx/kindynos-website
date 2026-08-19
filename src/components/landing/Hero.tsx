@@ -15,6 +15,8 @@ export async function Hero() {
         width={1000}
         height={1000}
         className="pointer-events-none absolute -right-16 -bottom-24 w-[min(55vw,28rem)] opacity-15 select-none lg:right-8 lg:bottom-[-4rem] lg:w-[32rem]"
+        priority
+        loading="eager"
         aria-hidden
       />
       <div className="relative mx-auto flex min-h-[70vh] max-w-6xl flex-col justify-center gap-8 px-4 py-24 sm:px-6 sm:py-32 lg:min-h-[78vh] lg:py-40">

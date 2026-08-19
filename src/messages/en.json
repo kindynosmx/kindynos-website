@@ -96,7 +96,13 @@
     "submit": "Send message",
     "sending": "Sending…",
     "success": "Message sent. We’ll get back to you soon.",
-    "error": "Something went wrong. Email us directly and we’ll pick it up."
+    "error": "Something went wrong. Email us directly and we’ll pick it up.",
+    "errors": {
+      "name": "Enter your name.",
+      "email": "Enter a valid email.",
+      "message": "Tell us a bit about what you want to build.",
+      "turnstile": "Please complete the verification."
+    }
   },
   "Footer": {
     "tagline": "High-standard software for blockchain, web, and backend.",
@@ -123,15 +129,15 @@
       },
       {
         "title": "What we collect",
-        "body": "You can reach us by email at contact@kindynos.mx. Server logs may include your IP address, browser type, and the pages you request, which our hosting provider (Vercel) may process to operate the site."
+        "body": "If you use the contact form, we collect your name, email, optional company name, and message. You can also reach us at contact@kindynos.mx. Server logs may include your IP address, browser type, and the pages you request, which our hosting provider (Vercel) may process to operate the site."
       },
       {
         "title": "Why we collect it",
-        "body": "If you email us, we use that correspondence only to reply to your inquiry and, if relevant, to discuss a potential project. We do not sell your information or use it for advertising."
+        "body": "If you email us or send the contact form, we use that correspondence only to reply to your inquiry and, if relevant, to discuss a potential project. We do not sell your information or use it for advertising."
       },
       {
         "title": "How we share it",
-        "body": "We use Vercel to host the site. We share information only when needed to operate the site, respond to you, or comply with the law."
+        "body": "We use Vercel to host the site, Resend to deliver contact-form messages, and Cloudflare Turnstile to reduce spam on the form. We share information only when needed to operate the site, respond to you, or comply with the law."
       },
       {
         "title": "Retention",
@@ -143,7 +149,7 @@
       },
       {
         "title": "Cookies",
-        "body": "This site does not use advertising or analytics cookies. Essential cookies may be set by the framework or hosting provider to deliver the page and remember your language preference."
+        "body": "This site does not use advertising cookies. Cloudflare Turnstile may set a cookie to confirm you are human when you use the contact form. Essential cookies may be set by the framework or hosting provider to deliver the page and remember your language preference."
       },
       {
         "title": "International transfers",

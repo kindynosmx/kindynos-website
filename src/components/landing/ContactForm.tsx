@@ -26,7 +26,7 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>('idle')
   const [errors, setErrors] = useState<FieldErrors>({})
   const [serverError, setServerError] = useState<string>()
-  const [turnstileSize, setTurnstileSize] = useState<'compact' | 'flexible'>('flexible')
+  const [turnstileSize, setTurnstileSize] = useState<'compact' | 'flexible'>()
 
   useEffect(() => {
     const media = window.matchMedia('(max-width: 419px)')
@@ -183,7 +183,7 @@ export function ContactForm() {
         />
         <FieldError id="message-error" message={errors.message ? t('errors.message') : undefined} />
       </div>
-      {siteKey ? (
+      {siteKey && turnstileSize ? (
         <div className="space-y-2">
           <Turnstile
             ref={turnstileRef}

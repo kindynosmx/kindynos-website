@@ -1,10 +1,14 @@
 import { Mail } from 'lucide-react'
+import dynamic from 'next/dynamic'
 import { getTranslations } from 'next-intl/server'
 
-import { ContactForm } from '@/components/landing/ContactForm'
 import { IconBadge } from '@/components/landing/IconBadge'
 import { SectionEyebrow } from '@/components/landing/SectionEyebrow'
 import { CONTACT_EMAIL } from '@/lib/site'
+
+const ContactForm = dynamic(() => import('@/components/landing/ContactForm').then((mod) => mod.ContactForm), {
+  loading: () => <div className="bg-muted/40 min-h-80 animate-pulse rounded-md" />,
+})
 
 export async function Contact() {
   const t = await getTranslations('Contact')

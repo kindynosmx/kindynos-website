@@ -58,4 +58,24 @@ wrangler secret put RESEND_API_KEY
 wrangler secret put TURNSTILE_SECRET_KEY
 ```
 
-Set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a plaintext Worker var so it is inlined at build time. Optional: `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`.
+Set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a plaintext **build** variable so it is inlined at build time. Optional: `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`.
+
+### Workers Builds (Git)
+
+Cloudflare already ships Bun on the build image. Pin it to this repo’s version and run the OpenNext build — a plain `next build` / `bun run build` does not produce `.open-next/`.
+
+In the Worker **Settings → Build**:
+
+| Setting | Value |
+| --- | --- |
+| **Build command** | `bunx opennextjs-cloudflare build` |
+| **Deploy command** | `bunx wrangler deploy` |
+| **Non-production branch deploy** | `bunx opennextjs-cloudflare upload` |
+
+Build variables:
+
+| Variable | Value |
+| --- | --- |
+| `BUN_VERSION` | `1.3.14` |
+| `NODE_VERSION` | `22` |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | your Turnstile site key |

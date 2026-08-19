@@ -63,8 +63,6 @@ body {
   font-family: var(--font-sans);
   letter-spacing: 0.01em;
   line-height: 1.7;
-  overflow-x: clip;
-  max-width: 100%;
 }
 
 ::selection {
@@ -90,4 +88,33 @@ h3 {
 
 .brand-rule {
   background: linear-gradient(90deg, var(--pantone-7683), var(--pantone-526));
+}
+
+.brand-watermark::before,
+.brand-watermark-card::before {
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: url('/brand/isotype-white.png');
+  background-repeat: no-repeat;
+}
+
+.brand-watermark::before {
+  background-position: right -4rem bottom -6rem;
+  background-size: min(55vw, 28rem);
+  opacity: 0.15;
+}
+
+@media (min-width: 1024px) {
+  .brand-watermark::before {
+    background-position: right 2rem bottom -4rem;
+    background-size: 32rem;
+  }
+}
+
+.brand-watermark-card::before {
+  background-position: right -2rem bottom -2.5rem;
+  background-size: 12rem;
+  opacity: 0.2;
 }

@@ -6,18 +6,18 @@ import { usePathname, useRouter } from '@/i18n/navigation'
 import { routing } from '@/i18n/routing'
 import { cn } from '@/lib/utils'
 
-const LABELS: Record<string, string> = {
+const LABELS = {
   en: 'EN',
   es: 'ES',
-}
+} as const
 
-export function LanguageSwitcher({ className }: { className?: string }) {
+export function LanguageSwitcher() {
   const locale = useLocale()
   const router = useRouter()
   const pathname = usePathname()
 
   return (
-    <div className={cn('inline-flex items-center gap-1', className)} role="group" aria-label="Language">
+    <div className="inline-flex items-center gap-1" role="group" aria-label="Language">
       {routing.locales.map((code) => {
         const active = locale === code
 

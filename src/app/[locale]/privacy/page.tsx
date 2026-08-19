@@ -1,7 +1,9 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
+import { LegalDocument, type LegalSection } from '@/components/legal/LegalDocument'
 import { parseLocale } from '@/i18n/locale'
 import { buildMetadata } from '@/lib/metadata'
+import { SITE_NAME } from '@/lib/site'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -15,7 +17,7 @@ export async function generateMetadata({ params }: Props) {
 
   return buildMetadata({
     locale,
-    title: `${t('title')} · Kindynos`,
+    title: `${t('title')} · ${SITE_NAME}`,
     description: meta('description'),
     path: '/privacy',
   })
@@ -27,22 +29,13 @@ export default async function PrivacyPage({ params }: Props) {
   setRequestLocale(locale)
 
   const t = await getTranslations('Privacy')
-  const sections = t.raw('sections') as { title: string; body: string }[]
 
   return (
-    <main className="mx-auto max-w-3xl min-w-0 px-4 py-16 sm:px-6 sm:py-24">
-      <h1 className="font-display text-3xl font-semibold break-words sm:text-4xl">{t('title')}</h1>
-      <span className="brand-rule mt-4 block h-0.5 w-12 rounded-full" />
-      <p className="text-muted-foreground mt-3 text-sm">{t('updated')}</p>
-      <p className="text-muted-foreground mt-7 leading-8">{t('disclaimer')}</p>
-      <div className="mt-12 space-y-10">
-        {sections.map((section) => (
-          <section key={section.title}>
-            <h2 className="font-display text-xl font-medium">{section.title}</h2>
-            <p className="text-muted-foreground mt-4 leading-8">{section.body}</p>
-          </section>
-        ))}
-      </div>
-    </main>
+    <LegalDocument
+      title={t('title')}
+      updated={t('updated')}
+      disclaimer={t('disclaimer')}
+      sections={t.raw('sections') as LegalSection[]}
+    />
   )
 }

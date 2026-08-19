@@ -49,6 +49,7 @@ export function Navbar() {
           type="button"
           className="text-foreground inline-flex size-11 shrink-0 items-center justify-center rounded-md md:hidden"
           aria-expanded={open}
+          aria-controls="mobile-nav"
           aria-label={open ? t('closeMenu') : t('openMenu')}
           onClick={() => setOpen((value) => !value)}
         >
@@ -56,7 +57,7 @@ export function Navbar() {
         </button>
       </div>
 
-      <div className={cn('border-border border-t md:hidden', open ? 'block' : 'hidden')}>
+      <div id="mobile-nav" className={cn('border-border border-t md:hidden', open ? 'block' : 'hidden')}>
         <nav
           className="mx-auto flex max-h-[calc(100dvh-4rem)] max-w-6xl flex-col gap-1 overflow-y-auto px-4 py-3 pb-[max(1rem,env(safe-area-inset-bottom))]"
           aria-label="Mobile"

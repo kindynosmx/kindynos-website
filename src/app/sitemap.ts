@@ -9,7 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return routing.locales.flatMap((locale) =>
     PAGES.map((path) => ({
       url: `${SITE_URL}/${locale}${path}`,
-      lastModified: new Date(),
       changeFrequency: path === '' ? 'weekly' : 'yearly',
       priority: path === '' ? 1 : 0.3,
       alternates: {

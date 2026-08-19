@@ -15,16 +15,7 @@ export async function About() {
           <p className="text-muted-foreground mt-7 max-w-xl leading-7 text-pretty sm:leading-8">{t('body')}</p>
           <p className="text-muted-foreground mt-5 max-w-xl leading-7 text-pretty sm:leading-8">{t('body2')}</p>
         </div>
-        <blockquote className="brand-gradient relative overflow-hidden rounded-2xl p-7 sm:p-10">
-          <Image
-            src="/brand/isotype-white.png"
-            alt=""
-            width={192}
-            height={192}
-            sizes="12rem"
-            className="pointer-events-none absolute -right-8 -bottom-10 w-48 opacity-20 select-none"
-            aria-hidden
-          />
+        <blockquote className="brand-gradient brand-watermark-card relative overflow-hidden rounded-2xl p-7 sm:p-10">
           <Image
             src="/brand/isotype-white.png"
             alt=""
@@ -32,6 +23,7 @@ export async function About() {
             height={56}
             sizes="56px"
             className="relative mb-8 size-14"
+            aria-hidden
           />
           <p className="font-display relative text-3xl font-semibold tracking-[0.08em] text-white uppercase sm:text-5xl sm:tracking-[0.12em]">
             {t('quote')}

@@ -6,8 +6,3 @@ export const LINKEDIN_URL = 'https://www.linkedin.com/company/35519796'
 
 export const LOGO_URL = `${SITE_URL}/brand/logo-gray.png`
 export const FAVICON_URL = '/brand/icon.png'
-
-export const ICONS = {
-  apple: '/brand/icon.png',
-  favicon: FAVICON_URL,
-} as const

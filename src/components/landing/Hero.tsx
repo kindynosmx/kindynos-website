@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { getTranslations } from 'next-intl/server'
 
 import { Button } from '@/components/ui/button'
@@ -8,19 +7,7 @@ export async function Hero() {
   const t = await getTranslations('Hero')
 
   return (
-    <section className="brand-gradient relative overflow-hidden">
-      <Image
-        src="/brand/isotype-white.png"
-        alt=""
-        width={1000}
-        height={1000}
-        sizes="(min-width: 1024px) 32rem, 55vw"
-        className="pointer-events-none absolute -right-16 -bottom-24 w-[min(55vw,28rem)] opacity-15 select-none lg:right-8 lg:bottom-[-4rem] lg:w-[32rem]"
-        priority
-        fetchPriority="high"
-        loading="eager"
-        aria-hidden
-      />
+    <section className="brand-gradient brand-watermark relative overflow-hidden">
       <div className="relative mx-auto flex min-h-[70vh] max-w-6xl min-w-0 flex-col justify-center gap-6 px-4 py-16 sm:gap-8 sm:px-6 sm:py-32 lg:min-h-[78vh] lg:py-40">
         <p className="text-xs font-medium tracking-[0.18em] text-white uppercase sm:text-sm sm:tracking-[0.32em]">
           {t('eyebrow')}
@@ -33,7 +20,12 @@ export async function Hero() {
           <Button asChild size="lg" variant="inverse" className="w-full sm:w-auto">
             <Link href={{ pathname: '/', hash: 'contact' }}>{t('cta')}</Link>
           </Button>
-          <Button asChild size="lg" variant="ghost" className="w-full text-white hover:bg-white/15 hover:text-white sm:w-auto">
+          <Button
+            asChild
+            size="lg"
+            variant="ghost"
+            className="w-full text-white hover:bg-white/15 hover:text-white sm:w-auto"
+          >
             <Link href={{ pathname: '/', hash: 'services' }}>{t('ctaSecondary')}</Link>
           </Button>
         </div>

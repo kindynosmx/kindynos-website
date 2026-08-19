@@ -32,3 +32,9 @@ bun-debug.log*
 # vercel
 .vercel
 .idea/
+
+# cloudflare / opennext
+.open-next
+.wrangler
+.dev.vars
+cloudflare-env.d.ts

@@ -11,6 +11,11 @@ const MAX_REQUESTS = 5
 const hits = new Map<string, number[]>()
 
 function getClientIp(request: Request) {
+  const cfIp = request.headers.get('cf-connecting-ip')
+  if (cfIp) {
+    return cfIp
+  }
+
   const forwarded = request.headers.get('x-forwarded-for')
   if (forwarded) {
     return forwarded.split(',')[0]?.trim() || 'unknown'

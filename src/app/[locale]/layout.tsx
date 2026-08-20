@@ -1,4 +1,3 @@
-import { Analytics } from '@vercel/analytics/next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import Script from 'next/script'
@@ -75,7 +74,6 @@ export default async function LocaleLayout({ children, params }: Props) {
           </div>
           <Footer />
         </NextIntlClientProvider>
-        <Analytics />
       </body>
     </html>
   )

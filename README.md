@@ -29,10 +29,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000). Locale routing lives at `/en` and `/es`.
 
-Set in `.env` (and the same keys in Vercel or Cloudflare for production):
+Set in `.env` (and the same secrets on the Worker for production):
 
-- `RESEND_API_KEY` — verify `kindynos.mx` at [Resend Domains](https://resend.com/domains) so mail can be sent from `contact@kindynos.mx`. Until then, local tests can use `CONTACT_FROM_EMAIL=Kindynos <beth.t@example.com>` and `CONTACT_TO_EMAIL` set to the email on your Resend account.
-- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` — add `localhost` and `kindynos.mx` as hostnames in [Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile)
+- `RESEND_API_KEY` — Resend API key. Mail is sent from `contact@resend.kindynos.mx`. Replies go to the visitor; the inbox is `contact@kindynos.mx`.
+- `TURNSTILE_SECRET_KEY` — Turnstile secret. Add `localhost` and `kindynos.mx` as hostnames in [Turnstile](https://dash.cloudflare.com/?to=/:account/turnstile). The public site key lives in `wrangler.jsonc` / `.env.production`.
 
 Restart `bun dev` after changing `NEXT_PUBLIC_*` values.
 
@@ -53,16 +53,16 @@ The app uses [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare). Loc
 
 Image optimization on Workers needs the `IMAGES` binding (Cloudflare Images).
 
-Runtime secrets belong on the Worker itself (**Settings → Variables and Secrets**, Production / Preview — not Development):
+Runtime **secrets** are not in git. Set them on the Worker with Wrangler (Production / Preview, not Development):
 
 ```bash
-wrangler secret put RESEND_API_KEY
-wrangler secret put TURNSTILE_SECRET_KEY
+bunx wrangler versions secret put RESEND_API_KEY
+bunx wrangler versions secret put TURNSTILE_SECRET_KEY
 ```
 
-`kindynos.mx` must be verified at [Resend Domains](https://resend.com/domains) or sends from `contact@kindynos.mx` will be rejected. Until then, set `CONTACT_FROM_EMAIL` (and optionally `CONTACT_TO_EMAIL`) as Worker vars.
+Public runtime values live in `wrangler.jsonc` `vars` (`CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL`, `NEXT_PUBLIC_TURNSTILE_SITE_KEY`). The Turnstile site key is also in `.env.development` / `.env.production` so `next build` can inline it.
 
-Set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a plaintext **build** variable so it is inlined at build time. Do not put `RESEND_API_KEY` only in Build variables — the API route reads it at runtime.
+Workers Builds only needs `BUN_VERSION` and `NODE_VERSION` as build variables. Do not put secrets in Build variables.
 
 ### Workers Builds (Git)
 
@@ -82,4 +82,3 @@ Build variables:
 | --- | --- |
 | `BUN_VERSION` | `1.3.14` |
 | `NODE_VERSION` | `22` |
-| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | your Turnstile site key |

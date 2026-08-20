@@ -3,7 +3,7 @@ import { Resend } from 'resend'
 
 import { parseContact, validateContact, asString } from '@/lib/contact'
 import { getRuntimeEnv } from '@/lib/env'
-import { CONTACT_EMAIL, SITE_NAME } from '@/lib/site'
+import { CONTACT_EMAIL, CONTACT_FROM_EMAIL, SITE_NAME } from '@/lib/site'
 import { verifyTurnstileToken } from '@/lib/turnstile'
 
 const WINDOW_MS = 10 * 60 * 1000
@@ -84,7 +84,7 @@ export async function POST(request: Request) {
     return jsonError(503)
   }
 
-  const from = (await getRuntimeEnv('CONTACT_FROM_EMAIL'))?.trim() || `${SITE_NAME} <${CONTACT_EMAIL}>`
+  const from = (await getRuntimeEnv('CONTACT_FROM_EMAIL'))?.trim() || CONTACT_FROM_EMAIL
   const to = (await getRuntimeEnv('CONTACT_TO_EMAIL'))?.trim() || CONTACT_EMAIL
 
   const lines = [`Name: ${fields.name}`, `Email: ${fields.email}`]

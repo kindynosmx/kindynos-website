@@ -1,6 +1,7 @@
 export const SITE_URL = 'https://kindynos.mx'
 export const SITE_NAME = 'Kindynos'
 export const CONTACT_EMAIL = 'contact@kindynos.mx'
+export const CONTACT_FROM_EMAIL = `Contacto Kindynos <contact@resend.kindynos.mx>`
 export const GITHUB_URL = 'https://github.com/kindynosmx'
 export const LINKEDIN_URL = 'https://www.linkedin.com/company/35519796'
 

@@ -13,6 +13,13 @@
   "observability": {
     "enabled": true,
   },
+  // Secrets: `bunx wrangler versions secret put RESEND_API_KEY`
+  //          `bunx wrangler versions secret put TURNSTILE_SECRET_KEY`
+  "vars": {
+    "CONTACT_FROM_EMAIL": "Contacto Kindynos <contact@resend.kindynos.mx>",
+    "CONTACT_TO_EMAIL": "contact@kindynos.mx",
+    "NEXT_PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAAEUxTTX_C0tZok6d",
+  },
   "services": [
     {
       "binding": "WORKER_SELF_REFERENCE",

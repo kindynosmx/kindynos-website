@@ -7,6 +7,7 @@ declare global {
     TURNSTILE_SECRET_KEY?: string
     CONTACT_FROM_EMAIL?: string
     CONTACT_TO_EMAIL?: string
+    NEXT_PUBLIC_TURNSTILE_SITE_KEY?: string
   }
 }
 

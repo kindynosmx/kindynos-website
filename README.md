@@ -51,14 +51,18 @@ Copy lives in `src/messages/en.json` and `src/messages/es.json`.
 
 The app uses [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare). Locale routing stays on `src/middleware.ts` (Edge) because OpenNext does not yet support Next.js 16 `proxy.ts` Node middleware.
 
-Image optimization on Workers needs the `IMAGES` binding (Cloudflare Images). Put secrets in the Worker (Preview / Production), not in Development:
+Image optimization on Workers needs the `IMAGES` binding (Cloudflare Images).
+
+Runtime secrets belong on the Worker itself (**Settings → Variables and Secrets**, Production / Preview — not Development):
 
 ```bash
 wrangler secret put RESEND_API_KEY
 wrangler secret put TURNSTILE_SECRET_KEY
 ```
 
-Set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a plaintext **build** variable so it is inlined at build time. Optional: `CONTACT_FROM_EMAIL` and `CONTACT_TO_EMAIL`.
+`kindynos.mx` must be verified at [Resend Domains](https://resend.com/domains) or sends from `contact@kindynos.mx` will be rejected. Until then, set `CONTACT_FROM_EMAIL` (and optionally `CONTACT_TO_EMAIL`) as Worker vars.
+
+Set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` as a plaintext **build** variable so it is inlined at build time. Do not put `RESEND_API_KEY` only in Build variables — the API route reads it at runtime.
 
 ### Workers Builds (Git)
 
@@ -69,8 +73,8 @@ In the Worker **Settings → Build**:
 | Setting | Value |
 | --- | --- |
 | **Build command** | `bunx opennextjs-cloudflare build` |
-| **Deploy command** | `bunx wrangler deploy` |
-| **Non-production branch deploy** | `bunx opennextjs-cloudflare upload` |
+| **Deploy command** | `bunx opennextjs-cloudflare deploy -- --keep-vars` |
+| **Non-production branch deploy** | `bunx opennextjs-cloudflare upload -- --keep-vars` |
 
 Build variables:
 

@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
 import { parseContact, validateContact, asString } from '@/lib/contact'
+import { getRuntimeEnv } from '@/lib/env'
 import { CONTACT_EMAIL, SITE_NAME } from '@/lib/site'
 import { verifyTurnstileToken } from '@/lib/turnstile'
 
@@ -77,13 +78,14 @@ export async function POST(request: Request) {
     return jsonError(400)
   }
 
-  const apiKey = process.env.RESEND_API_KEY
+  const apiKey = await getRuntimeEnv('RESEND_API_KEY')
   if (!apiKey) {
+    console.error('RESEND_API_KEY is not set on the Worker')
     return jsonError(503)
   }
 
-  const from = process.env.CONTACT_FROM_EMAIL?.trim() || `${SITE_NAME} <${CONTACT_EMAIL}>`
-  const to = process.env.CONTACT_TO_EMAIL?.trim() || CONTACT_EMAIL
+  const from = (await getRuntimeEnv('CONTACT_FROM_EMAIL'))?.trim() || `${SITE_NAME} <${CONTACT_EMAIL}>`
+  const to = (await getRuntimeEnv('CONTACT_TO_EMAIL'))?.trim() || CONTACT_EMAIL
 
   const lines = [`Name: ${fields.name}`, `Email: ${fields.email}`]
   if (fields.company) {
@@ -101,6 +103,7 @@ export async function POST(request: Request) {
   })
 
   if (error) {
+    console.error('Resend rejected the message:', error)
     return jsonError(502, error.message)
   }
 

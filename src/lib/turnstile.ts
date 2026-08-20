@@ -1,8 +1,13 @@
+import { getRuntimeEnv } from '@/lib/env'
+
 const SITEVERIFY_URL = 'https://challenges.cloudflare.com/turnstile/v0/siteverify'
 
 export async function verifyTurnstileToken(token: string, ip: string) {
-  const secret = process.env.TURNSTILE_SECRET_KEY
+  const secret = await getRuntimeEnv('TURNSTILE_SECRET_KEY')
   if (!secret || !token) {
+    if (!secret) {
+      console.error('TURNSTILE_SECRET_KEY is not set on the Worker')
+    }
     return false
   }
 
